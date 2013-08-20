@@ -1,3 +1,7 @@
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
 #test1
 {
 text-align:center;
@@ -59,3 +63,15 @@ width:175px;
 height:400px;
 background-color:red;
 }	
+li
+{
+  background-image:url("../images/img2");
+  width:400px;
+  height:200px;
+  margin:0 auto;
+}
+#banner
+{
+  width:700px;
+  height:350px;
+}
