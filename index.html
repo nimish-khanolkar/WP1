@@ -7,26 +7,36 @@
  <script src="//unslider.com/unslider.js"></script>
  </head>
  <body>
- 
-<script>
-$(function() {
-    $('.banner').unslider({
-    speed:500,
-    delay:3000,
-    dots:true
-    });
-});
-</script>
-
+ <script>
+ function drawImage(src){
+ //$("#content1").html(<p> src </p>);
+ $("#image").fadeOut('slow',function(){
+ //on fading out, change the css 
+ $("#image").css("src",src);
+ $("#image").fadeIn();
+ });
+ //inject new src
+ //fadein new image
+ }
+ $(document).ready(function(){
+ var image_array=["public/images/img1","public/images/img2" ,"public/images/img3" ,"public/images/img4" ,"public/images/img5" ];
+ var curr_img_index = 0;
+  $("#content1").html("<p>curr_img_index</p>");
+ while( curr_img_index < image_array.length){
+ setInterval(function(){
+ drawImage(image_array[curr_img_index])},1000);
+ //curr_img_index=curr_img_index+1;
+ //resetting the index to zero at end
+ if(curr_img_index==image_array.length)
+ curr_img_index = 0;
+ }
+ });
+ </script>
   <div id=main>
     <div id=slider>
-    <div class="banner">
-    <u1>
-        <li>This is a slide.</li>
-        <li>This is another slide.</li>
-        <li>This is a final slide.</li>
-    </u1>
-    </div>
+    <img id='left' style="position:relative; height:50px; width:auto; left:0px; top:160px;" src="public/images/arrowleft.jpg"  />
+    <img id='right' style="position:relative; height:50px; width:auto; left:790px; top:160px;" src="public/images/arrowright.jpg"  />
+    <img id='image' style="position:absolute; height:300px; width:500; left:220px; top:50px;" src="public/images/img1"  />
     </div>
     <div id=menu>
     <p>menu div </p>
