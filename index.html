@@ -8,28 +8,51 @@
  </head>
  <body>
  <script>
- function drawImage(src){
- //$("#content1").html(<p> src </p>);
- $("#image").fadeOut('slow',function(){
+ //This function takes src and fadesout and fadesin new image as per src
+ function drawImage ( newsrc ){
+ $("#image").fadeOut(1000,function(){
  //on fading out, change the css 
- $("#image").css("src",src);
+ $("#image").attr("src",newsrc);
  $("#image").fadeIn();
  });
- //inject new src
- //fadein new image
  }
  $(document).ready(function(){
  var image_array=["public/images/img1","public/images/img2" ,"public/images/img3" ,"public/images/img4" ,"public/images/img5" ];
- var curr_img_index = 0;
-  $("#content1").html("<p>curr_img_index</p>");
- while( curr_img_index < image_array.length){
+ 
+ ///////////Code block for auto slide///////////////
  setInterval(function(){
- drawImage(image_array[curr_img_index])},1000);
- //curr_img_index=curr_img_index+1;
- //resetting the index to zero at end
- if(curr_img_index==image_array.length)
+ var src = $('#image').attr("src");
+ var curr_img_index=image_array.indexOf(src);
+ if( curr_img_index != image_array.length - 1)
+ curr_img_index=curr_img_index+1;
+ else
  curr_img_index = 0;
+ drawImage(image_array[curr_img_index]);
  }
+ ,5000);
+ ////////////////////////////////////////////////////
+ /////////Code block for forced forward//////////////
+ $('#left').click(function(){
+ console.log('Click Caught');
+ var src = $('#image').attr("src");
+ var curr_img_index=image_array.indexOf(src);
+ if( curr_img_index != image_array.length - 1)
+ curr_img_index=curr_img_index-1;
+ else
+ curr_img_index = 0;
+ drawImage(image_array[curr_img_index]);
+ });
+  $('#right').click(function(){
+ console.log('Click Caught');
+ var src = $('#image').attr("src");
+ var curr_img_index=image_array.indexOf(src);
+ if( curr_img_index != 0)
+ curr_img_index=curr_img_index+1;
+ else
+ curr_img_index = image_array.length - 1;
+ drawImage(image_array[curr_img_index]);
+ });
+ ///////////////////////////////////////////////////
  });
  </script>
   <div id=main>

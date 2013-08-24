@@ -1,19 +1,17 @@
-.banner { position: relative; overflow: auto; }
-    .banner li { list-style: none; }
-        .banner ul li { float: left; }
 
-#test1
-{
-text-align:center;
-color:red;
-font-family:"Times New Roman", Times, serif;
-background-color:green;
-font-size:40px;
-width:40%;
-height:100px;
-margin:5px;
-border:5px solid grey;
-}
+
+
+
+
+
+
+
+
+
+
+#left:hover {cursor:pointer;}
+#right:hover{cursor:pointer;}
+
 #main
 {
 position:relative;
@@ -32,7 +30,7 @@ position:relative;
 width:850px;
 height:400px;
 margin:0 auto;
-background-color:yellow;
+background-color:black;
 }
 #menu
 {
@@ -41,7 +39,7 @@ position:relative;
 width:850px;
 height:40px;
 margin:0 auto;
-background-color:red;
+background-color:#9C9C9C;
 }
 #content1
 {
@@ -51,7 +49,7 @@ float:left;
 margin-left:25px;
 width:650px;
 height:400px;
-background-color:red;
+background-color:#FAFAFA;
 }
 #content2
 {
@@ -61,17 +59,17 @@ float:right;
 top:10px;
 width:175px;
 height:400px;
-background-color:red;
+background-color:#FAFAFA;
 }	
-li
-{
-  background-image:url("../images/img2");
-  width:400px;
-  height:200px;
-  margin:0 auto;
-}
-#banner
-{
-  width:700px;
-  height:350px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
