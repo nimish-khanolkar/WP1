@@ -1,17 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
 #left:hover {cursor:pointer;}
 #right:hover{cursor:pointer;}
-
+.menubutton{width:150px;}
+#menu1{float:left;z-index:2;}
+#menu2{float:left;z-index:2;}
 #main
 {
 position:relative;
@@ -32,8 +23,9 @@ height:400px;
 margin:0 auto;
 background-color:black;
 }
-#menu
+#menubar
 {
+z-index:2;
 position:relative;
 
 width:850px;
@@ -45,6 +37,7 @@ background-color:#9C9C9C;
 {
 position:relative;
 top:10px;
+z-index:1;
 float:left;
 margin-left:25px;
 width:650px;

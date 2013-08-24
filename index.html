@@ -3,8 +3,9 @@
  <head>
  <title>Introduction</title>
  <link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
- <script src="//code.jquery.com/jquery-latest.min.js"></script>
- <script src="//unslider.com/unslider.js"></script>
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+ <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
  </head>
  <body>
  <script>
@@ -53,20 +54,38 @@
  drawImage(image_array[curr_img_index]);
  });
  ///////////////////////////////////////////////////
+ $('#menu1').menu();
+ $('#menu2').menu();
  });
+ 
  </script>
-  <div id=main>
-    <div id=slider>
+ 
+  <div id='main'>
+    <div id='slider'>
     <img id='left' style="position:relative; height:50px; width:auto; left:0px; top:160px;" src="public/images/arrowleft.jpg"  />
     <img id='right' style="position:relative; height:50px; width:auto; left:790px; top:160px;" src="public/images/arrowright.jpg"  />
     <img id='image' style="position:absolute; height:300px; width:500; left:220px; top:50px;" src="public/images/img1"  />
     </div>
-    <div id=menu>
-    <p>menu div </p>
+    <div id='menubar'>
+     <ul id='menu1' class='menubutton'>
+	    <li><a href='#'>Item 1</a>
+	    <ul>
+	    <li><a href='#'>Item 1.1</a></li>
+	    <li><a href='#'>Item 1.2</a></li>
+	    </ul>
+	</ul>
+    <ul id='menu2' class='menubutton'>
+	    <li><a href='#'>Item 2</a>
+	    <ul>
+	    <li><a href='#'>Item 2.1</a></li>
+	    <li><a href='#'>Item 2.2</a></li>
+	    </ul>
+	</ul>
     </div>
-    <div id=content1>
+    <div id='content1'>
+
     </div>
-    <div id=content2>
+    <div id='content2'>
     </div>
   </div>
  </body>
