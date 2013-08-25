@@ -17,42 +17,42 @@ overflow:hidden;
 #slider
 {
 position:relative;
-
 width:850px;
 height:400px;
+top:15px;
 margin:0 auto;
-background-color:black;
+background-color:#323232;
 }
 #menubar
 {
 z-index:2;
+top:30px;
 position:relative;
-
 width:850px;
 height:40px;
 margin:0 auto;
-background-color:#9C9C9C;
+background-color:#323232;
 }
 #content1
 {
 position:relative;
-top:10px;
+top:50px;
 z-index:1;
 float:left;
 margin-left:25px;
 width:650px;
 height:400px;
-background-color:#FAFAFA;
+background-color:#E5E5E5;
 }
 #content2
 {
 position:relative;
 right:25px;
 float:right;
-top:10px;
+top:50px;
 width:175px;
 height:400px;
-background-color:#FAFAFA;
+background-color:#E5E5E5;
 }	
 
 
