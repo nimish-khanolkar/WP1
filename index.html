@@ -2,10 +2,10 @@
 <html>
  <head>
  <title>Introduction</title>
- <link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+ <link rel="stylesheet" type="text/css" href="public/resources/styles.css">
+ <link rel="stylesheet" href="public/resources/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.css">
  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
- <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ <script src="public/resources/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
  </head>
  <body>
  <script>
@@ -56,6 +56,7 @@
  ///////////////////////////////////////////////////
  $('#menu1').menu();
  $('#menu2').menu();
+ //$('#content1').position({my:'left top', at:'left top', of: '#menubar'});   
  });
  
  </script>
@@ -82,17 +83,11 @@
 	    </ul>
 	</ul>
     </div>
-    <div id='content1'>
-	<p>Hey..Thanks for visiting this page.<br>
-	This is a sample webpage to learn webprogramming. 
-	The above slider is programmed by me. 
-	The website is hosted on <a href='http://aws.amazon.com' target='_blank'>AWS</a><br>
-	The main server is implemented in node.js. Sits inside a EC2 Linux Microinstance. The Images of the slider are in a Amazone S3 Bucket. <br>
-	Thats all for now! Would keep you posted.	
-
-	</p>
+    <div id='content1' class='ui-widget'>
+        <div class='ui-widget-content'>	<p>content1<br></p></div>
     </div>
     <div id='content2'>
+    <p>content2</p>
     </div>
   </div>
  </body>
